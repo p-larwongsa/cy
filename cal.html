@@ -1,0 +1,259 @@
+<script type="text/javascript">
+	var sequence = ["L","kpn","minus-rama6","pho-phraya","pho-koi","pak-hai","upper-field","jao-pra-ya","lower-east","pasak","rama6","left-east","upper-lower","east","west","nakhonsawan_province","nakhonsawan","nan","ping","kwai-noi2","kwai-noi1","kamphaeng-phet","tortongdaeng","phitsanulok","yom_nan","tak","uttaradit","bhumibol-sirikit"];
+	var nodes  = [
+	{
+		id: "bhumibol-sirikit" ,
+		//name: "การระบายน้ำจากอ่างภูมิพลและสิริกิติ์",
+		child: ["uttaradit"],
+		value: 6150,
+		requirement: 0,
+
+	},
+	{
+		id: "uttaradit" ,
+		//name: "การใช้น้ำโครงการอุตรดิตถ์",
+		child: ["tak"],
+		value: 25,
+		requirement: 0,
+
+	},
+	{
+		id: "tak" ,
+		//name: "การใช้น้ำโครงการตาก",
+		child: ["yom_nan"],
+		value: 30,
+		requirement: 0,
+
+	},
+	{
+		id: "yom_nan" ,
+		//name: "การใช้น้ำโครงการยม-น่าน",
+		child: ["phitsanulok"],
+		value: 205,
+		requirement: 0,
+
+	},
+	{
+		id: "phitsanulok" ,
+		//name: "การใช้น้ำโครงการพิษณุโลก",
+		child: ["tortongdaeng"],
+		value: 395,
+		requirement: 0,
+
+	},
+	{
+		id: "tortongdaeng" ,
+		//name: "การใช้น้ำโครงการท่อทองแดง",
+		child: ["kamphaeng-phet"],
+		value: 295,
+		requirement: 0,
+
+	},
+	{
+		id: "kamphaeng-phet" ,
+		//name: "การใช้น้ำโครงการกำแพงเพชร",
+		child: ["kwai-noi1"],
+		value: 395,
+		requirement: 0,
+
+	},
+	{
+		id: "kwai-noi1" ,
+		//name: "การใช้น้ำโครงการแควน้อย",
+		child: ["ping","kwai-noi2"],
+		value: 85,
+		requirement: 0,
+
+	},
+	{
+		id: "kwai-noi2" ,
+		//name: "ระบายน้ำจากอ่างฯแควน้อย",
+		child: [],
+		value: -650,
+		requirement: 0,
+
+	},
+	{
+		id: "ping" ,
+		//name: "สถานีสูบน้ำ+อื่นๆ(ม.ปิง)",
+		child: ["nan"],
+		value: 120,
+		requirement: 0,
+
+	},
+	{
+		id: "nan" ,
+		//name: "สถานีสูบน้ำ+อื่นๆ(ม.น่าน)",
+		child: ["nakhonsawan"],
+		value: 330,
+		requirement: 0,
+
+	},
+	{
+		id: "nakhonsawan" ,
+		//name: "โครงการฯนครสวรรค์",
+		child: ["nakhonsawan_province"],
+		value: 115,
+		requirement: 0,
+
+	},
+	{
+		id: "nakhonsawan_province" ,
+		//name: "จ.นครสวรรค์",
+		child: ["west","east","jao-pra-ya"],
+		value: 0,
+		requirement: 0,
+	},
+	{
+		id: "west" ,
+		//name: "การใข้น้ำทุ่งฝั่งตะวันตก",
+		child: ["upper-field","pho-phraya"],
+		value: 0,
+		requirement: 0,
+
+	},
+	{
+		id: "upper-field" ,
+		//name: "ทุ่งตอนบน",
+		child: ["pak-hai"],
+		value: 1300,
+		requirement: 0,
+
+	},
+	{
+		id: "pak-hai" ,
+		//name: "ปตร.ผักไห่-เจ้าเจ็ด",
+		child: ["pho-koi"],
+		value: 75,
+		requirement: 0,
+
+	},
+	{
+		id: "pho-koi" ,
+		//name: "ปตร.โพธิ์คอย",
+		child: [],
+		value: 75,
+		requirement: 0,
+
+	},
+	{
+		id: "pho-phraya" ,
+		//name: "ปตร.โพธิ์พระยา",
+		child: [],
+		value: 740,
+		requirement: 0,
+
+	},
+ 
+	// east
+	{
+		id: "east" ,
+		//name: "การใข้น้ำทุ่งฝั่งตะวันออก",
+		child: ["upper-lower","left-east"],
+		value: 0,
+		requirement: 0,
+
+	},
+	{
+		id: "upper-lower" ,
+		//name: "ทุ่งตอนบนและตอนล่าง",
+		child: [],
+		value: 1325,
+		requirement: 0,
+
+	},
+	{
+		id: "left-east" ,
+		child: ["lower-east","pasak","rama6"],
+		value: 0,
+		requirement: 0,
+
+	},
+	{
+		id: "rama6" ,
+		//name: "เขื่อนพระรามหก ค่าบวก",
+		child: [],
+		value: 250,
+		requirement: 0,
+
+	},
+	{
+		id: "pasak" ,
+		//name: "ระบายน้ำจากอ่างป่าสักฯ",
+		child: [],
+		value: -700,
+		requirement: 0,
+
+	},
+	{
+		id: "lower-east" ,
+		//name: "ทุ่งตอนล่าง",
+		child: [],
+		value: 540,
+		requirement: 0,
+
+	},
+	 //end east
+	{
+		id: "jao-pra-ya" ,
+		//name: "เขื่อนเจ้าพระยา",
+		child: ["minus-rama6"],
+		value: 0,
+		requirement: 0,
+
+	},
+	{
+		id: "minus-rama6" ,
+		//name: "เขื่อนพระรามหก ค่าลบ",
+		child: ["kpn"],
+		value: -250,
+		requirement: 0,
+
+	},
+	{
+		id: "kpn" ,
+		//name: "กปน.",
+		child: ["L"],
+		value: 850,
+		requirement: 0,
+
+	},
+	{
+		id: "L" ,
+		//name: "รักษาระบบนิเวศน์และผลักดันน้ำเค็มปากแม่น้ำเจ้าพระยา",
+		child: [],
+		value: 600,
+		requirement: 0,
+
+	},
+	];
+
+var find_node = function(id){
+	for (var i=0; i<nodes.length; i++) {
+            console.log(nodes[i]);
+            if(nodes[i].id == id){
+            	console.log("find = ",nodes[i]);
+            	return nodes[i];
+            }
+            //a b c
+        }
+}
+
+var calrequirement = function(id){
+	var node = find_node(id);
+	var req = node.value;
+	for(var i=0;i<node.child.length; i++){
+		var child = find_node(node.child[i]);
+		req += child.requirement; 
+	}
+	node.requirement = req;
+} 
+
+ find_node("a");
+// calrequirement("a");
+for(var i=0;i<sequence.length-1; i++){
+	calrequirement(sequence[i]);
+
+}
+ console.log("totle node",nodes);
+</script>
